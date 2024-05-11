@@ -1,0 +1,167 @@
+/* Universal Box Sizing: Every element will include padding and border in the defined width and height */
+* {
+  box-sizing: border-box;
+  margin: 0; /* No default margin */
+  padding: 0; /* No default padding */
+}
+
+/* Body Styles */
+body {
+  font-family: "Montserrat", sans-serif; /* Font family for the whole document */
+  font-size: 36px; /* Base font size */
+  color: #fff; /* Text color */
+  background-color: #333; /* Background color */
+  overflow: hidden; /* Hide overflow content */
+}
+
+/* Sky Styles */
+.sky {
+  position: relative; /* Relative positioning for contained elements */
+  height: 60vh; /* 60% of the viewport height */
+  background-color: royalblue; /* Sky background color */
+  animation: sky 8s linear infinite; /* Sky animation */
+}
+
+/* Sun Styles */
+.sun {
+  position: absolute; /* Absolute positioning for precise placement */
+  top: 50px; /* Distance from the top of the parent container */
+  left: 100px; /* Distance from the left of the parent container */
+  width: 90px; /* Sun's width */
+  height: 90px; /* Sun's height */
+  border-radius: 50%; /* Circular shape */
+  background-color: orange; /* Sun's color */
+  box-shadow: 0 0 70px yellow; /* Sun's shadow */
+  animation: sun 8s infinite linear; /* Sun animation */
+}
+
+/* Ground Styles */
+.ground {
+  position: relative; /* Relative positioning for contained elements */
+  bottom: 0; /* Positioned at the bottom */
+  height: 40vh; /* 40% of the viewport height */
+  background-color: #4a3535; /* Ground color */
+}
+
+/* Grass Styles */
+.grass {
+  position: absolute; /* Absolute positioning for precise placement */
+  top: 0; /* Positioned at the top */
+  height: 200px; /* Grass height */
+  width: 100%; /* Full width of the parent container */
+  background-color: lime; /* Grass color */
+}
+
+/* Road Styles */
+.road {
+  position: absolute; /* Absolute positioning for precise placement */
+  top: 30px; /* Distance from the top */
+  height: 120px; /* Road's height */
+  width: 100%; /* Full width of the parent container */
+  background-color: gray; /* Road's color */
+}
+
+/* Car Styles */
+.car {
+  position: absolute; /* Absolute positioning for precise placement */
+  top: -15px; /* Distance from the top */
+  left: 200px; /* Distance from the left */
+  height: 70px; /* Car's height */
+  width: 150px; /* Car's width */
+  background-color: tomato; /* Car's color */
+  border-radius: 15px; /* Rounded corners */
+  animation: car 8s ease-in infinite; /* Car animation */
+}
+
+/* Car Wheels Styles */
+.wheels {
+  position: absolute; /* Absolute positioning for precise placement */
+  bottom: -10px; /* Distance from the bottom */
+  width: 35px; /* Wheels' width */
+  height: 35px; /* Wheels' height */
+  background-color: black; /* Wheels' color */
+  border-radius: 50%; /* Circular shape */
+  border: 2px dashed #999; /* Wheels' border */
+  animation: wheels 2s infinite linear; /* Wheels animation */
+}
+
+/* Front Wheel Styles */
+.front-wheel {
+  right: 8px; /* Distance from the right */
+  z-index: 1; /* Stacking order */
+}
+
+/* Rear Wheel Styles */
+.rear-wheel {
+  left: 8px; /* Distance from the left */
+}
+
+/* Car Window Styles */
+.window {
+  position: absolute; /* Absolute positioning for precise placement */
+  top: 5px; /* Distance from the top */
+  height: 30px; /* Window's height */
+  width: 50px; /* Window's width */
+  background-color: blue; /* Window's color */
+}
+
+/* Front Window Styles */
+.front-window {
+  right: 0; /* Distance from the right */
+  border-top-right-radius: 9px; /* Rounded corner */
+}
+
+/* Rear Window Styles */
+.rear-window {
+  left: 0; /* Distance from the left */
+  border-top-left-radius: 9px; /* Rounded corner */
+}
+
+/* Sun Animation */
+@keyframes sun {
+  0% {
+    top: 1000px; /* Sun's initial position */
+  }
+  40% {
+    top: 50px; /* Sun's position during animation */
+  }
+  60% {
+    top: 50px; /* Sun's position during animation */
+  }
+  100% {
+    top: 1000px; /* Sun's final position */
+  }
+}
+/* Car Animation */
+@keyframes car {
+  from {
+    left: -500px; /* Car's initial position */
+  }
+  to {
+    left: 1500px; /* Car's final position */
+  }
+}
+/* Wheels Animation */
+@keyframes wheels {
+  from {
+    transform: rotate(0); /* Initial rotation */
+  }
+  to {
+    transform: rotate(360deg); /* Full rotation */
+  }
+}
+/* Sky Animation */
+@keyframes sky {
+  0% {
+    background-color: black; /* Sky's initial color */
+  }
+  40% {
+    background-color: royalblue; /* Sky's color during animation */
+  }
+  60% {
+    background-color: royalblue; /* Sky's color during animation */
+  }
+  100% {
+    background-color: black; /* Sky's final color */
+  }
+}/*# sourceMappingURL=style.css.map */
